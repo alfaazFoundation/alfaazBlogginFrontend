@@ -1,32 +1,42 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <nav-bar></nav-bar>
     </div>
     <router-view/>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+
+import Vue from 'vue'
+import Buefy from 'buefy'
+import NavBar from './components/NavBar'
+import VueCarousel from 'vue-carousel';
+import 'buefy/dist/buefy.css'
+import moment from "moment";
+
+export default {
+  name: 'App',
+  components: {
+    NavBar
+  }
 }
 
-#nav {
-  padding: 30px;
-}
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+Vue.use(
+    Buefy,
+)
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+
+Vue.use(VueCarousel);
+Vue.filter('formatDate', function(value) {
+  if (value) {
+    return moment(String(value)).format('MM/DD/YYYY')
+  }
+})
+</script>
+
+<style lang="scss">
+@import 'src/assets/scss/app.scss';
 </style>
