@@ -1,22 +1,17 @@
 <template>
-  <section class="section has-background-light same-page-height" >
-    <div class="columns">
-      <div class="column is-4 is-offset-4  box">
-        <h1 class="title is-1 has-text-primary has-text-centered">Start with Invoicer!</h1>
-        <p class="has-text-centered has-text-black has-text-weight-bold mt2 mb1">Personal Details</p>
-        <!--   Email     -->
-        <div class="columns">
-          <div class="column">
-            <b-field label="Email">
-              <b-input
-                placeholder="Email"
-                type="email"
-                v-model="biller.email"
-              >
-              </b-input>
-            </b-field>
-          </div>
+  <section class="section has-background-light has-full-page-height" >
+    <div class="columns mt3">
+      <div class="column is-4 is-offset-4 mt5 box">
+
+        <div class="column is-12 has-text-centered">
+          <figure class="image is-96x96 is-inline-block ">
+            <img class="" src="../assets/images/alfaazLogoSquare.png">
+          </figure>
         </div>
+
+        <h1 class="title is-1 has-text-primary has-text-centered">Alfaaz Foundation</h1>
+<!--        <p class="has-text-centered has-text-black has-text-weight-bold mt2 mb1">Personal Details</p>-->
+
         <!--  Name  -->
         <div class="columns">
           <div class="column">
@@ -39,8 +34,22 @@
             </b-field>
           </div>
         </div>
+
+        <!--   Email     -->
+        <div class="columns">
+          <div class="column">
+            <b-field label="Email">
+              <b-input
+                  placeholder="Email"
+                  type="email"
+                  v-model="biller.email"
+              >
+              </b-input>
+            </b-field>
+          </div>
+        </div>
         <!--  Address  -->
-        <p class="has-text-centered has-text-black has-text-weight-bold mt2 mb1">Address</p>
+<!--        <p class="has-text-centered has-text-black has-text-weight-bold mt2 mb1">Address</p>
         <div class="columns">
           <div class="column">
             <b-field label="Street">
@@ -75,10 +84,10 @@
               </b-input>
             </b-field>
           </div>
-        </div>
+        </div>-->
         <!--  Details  -->
-        <p class="has-text-centered has-text-black has-text-weight-bold mt2 mb1">Other</p>
-        <div class="columns">
+<!--        <p class="has-text-centered has-text-black has-text-weight-bold mt2 mb1">Other</p>-->
+<!--        <div class="columns">
           <div class="column">
             <b-field label="IBAN">
               <b-input placeholder="IBAN"
@@ -87,8 +96,8 @@
             </b-field>
           </div>
 
-        </div>
-        <div class="columns">
+        </div>-->
+<!--        <div class="columns">
           <div class="column">
             <b-field label="Company Name">
               <b-input placeholder="Company Name"
@@ -97,13 +106,13 @@
               </b-input>
             </b-field>
           </div>
-        </div>
+        </div>-->
         <!--   Password   -->
         <div class="columns">
           <div class="column">
             <b-field label="Password">
               <b-input placeholder="Password"
-                       v-model="biller.company"
+                       v-model="biller.password"
                        type="password"
               >
               </b-input>
@@ -116,7 +125,7 @@
             <div class="field is-grouped is-grouped-centered">
               <p class="control">
                 <button class="button is-primary" @click="registerBiller">
-                  Submit
+                  Register
                 </button>
               </p>
             </div>
@@ -138,7 +147,7 @@
   import axios from 'axios';
 
   export default {
-    name: "RegisterBiller.vue"
+    name: "Register.vue"
     , mounted() {
       this.axiosInstance = axios.create({
         baseURL: baseUrl,

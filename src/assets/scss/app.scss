@@ -186,7 +186,10 @@ $carousel-arrow-background:transparent;
 
 .same-page-height {
   min-height: 88vh !important;
+}
 
+.has-full-page-height {
+  min-height: 100vh !important;
 }
 
 .has-light-dark-border{
