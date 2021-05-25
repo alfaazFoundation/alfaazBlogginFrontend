@@ -37,10 +37,10 @@ $link: #807e7e;
 
 //Navbar
 $navbar-item-img-max-height: none;
-$navbar-background-color:#f6f7f7;
+$navbar-background-color:#ffffff;
 
 //Body
-$body-background-color: #ffffff;
+$body-background-color: #A9A9A9;
 $body-color: #0d0d0d;
 
 //input configuration
@@ -200,6 +200,10 @@ textarea,select{
 .is-draft{
   color: white !important;
   background-color: $draft !important;
+}
+
+.is-horizontal-center {
+  justify-content: center;
 }
 
 
