@@ -12,7 +12,7 @@
 import Vue from 'vue'
 import Buefy from 'buefy'
 import NavBar from './components/NavBar'
-import VueCarousel from 'vue-carousel';
+
 import 'buefy/dist/buefy.css'
 import moment from "moment";
 
@@ -25,11 +25,13 @@ export default {
 
 
 Vue.use(
-    Buefy,
+    Buefy
 )
 
 
-Vue.use(VueCarousel);
+
+
+
 Vue.filter('formatDate', function(value) {
   if (value) {
     return moment(String(value)).format('MM/DD/YYYY')

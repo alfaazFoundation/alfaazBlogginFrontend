@@ -1,10 +1,10 @@
 <template>
-  <b-navbar shadow="true">
+  <b-navbar :shadow="true">
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
         <img
           src="../assets/images/alfaazLogoSquare.png"
-          width="80%"
+          width="50%"
           alt="AlfaazLogo"
         >
       </b-navbar-item>

@@ -63,6 +63,14 @@ $menu-label-color:$primary;
 $menu-item-color:$label-color;
 $menu-item-active-background-color:$primary;
 
+//Carousel
+$carousel-indicator-color:black;
+$carousel-min-height:10rem;
+$carousel-arrow-color:whitesmoke;
+$carousel-indicator-border:transparent;
+$carousel-indicator-color:whitesmoke;
+$carousel-arrow-background:transparent;
+
 
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
@@ -193,3 +201,5 @@ textarea,select{
   color: white !important;
   background-color: $draft !important;
 }
+
+
