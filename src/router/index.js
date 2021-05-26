@@ -10,11 +10,12 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home Page',
+
     component: WebsiteRouter,
     children:[
       {
         path:'/',
+        name: 'Home Page',
         component:Home
       },
     ]
@@ -39,8 +40,11 @@ const routes = [
   }
 ]
 
+
+
 const router = new VueRouter({
   routes
-})
+
+},)
 
 export default router

@@ -1,7 +1,9 @@
 <template>
   <div id="app">
 
-    <router-view/>
+    <router-view
+
+    />
   </div>
 </template>
 
@@ -14,11 +16,15 @@ import Buefy from 'buefy'
 import 'buefy/dist/buefy.css'
 import moment from "moment";
 
+
+const title = 'Alfaaz Foundation';
+
+document.title = title;
 export default {
   name: 'App',
   components: {
     // NavBar
-  }
+  },
 }
 
 

@@ -1,7 +1,13 @@
 {
   "name": "alfaazfrontend",
+
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Shivendra Singh Tanwar",
+    "email": "sunnysinghtanwar2@gmail.com",
+    "url": "https://github.com/shivendrasinghtanwar"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
