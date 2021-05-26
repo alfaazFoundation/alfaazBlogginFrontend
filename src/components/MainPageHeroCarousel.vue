@@ -1,30 +1,35 @@
 <template>
-  <b-carousel
-      indicator-style="is-lines"
+  <div class="columns">
+    <div class="column">
+      <b-carousel
+          indicator-style="is-lines"
+          pause-text=""
 
-  >
-    <b-carousel-item >
-      <figure class="image">
-        <img src="../assets/images/sample.jpg">
-      </figure>
-    </b-carousel-item>
-    <b-carousel-item >
-      <figure class="image">
-        <img src="../assets/images/sample2.jpg">
-      </figure>
-    </b-carousel-item>
-    <b-carousel-item >
-      <figure class="image">
-        <img src="../assets/images/sample.jpg">
-      </figure>
-    </b-carousel-item>
-    <b-carousel-item >
-      <figure class="image">
-        <img src="../assets/images/sample2.jpg">
-      </figure>
-    </b-carousel-item>
-  </b-carousel>
+      >
+        <b-carousel-item >
+          <figure class="image">
+            <img src="../assets/images/sample.jpg">
+          </figure>
+        </b-carousel-item>
+        <b-carousel-item >
+          <figure class="image">
+            <img src="../assets/images/sample2.jpg">
+          </figure>
+        </b-carousel-item>
+        <b-carousel-item >
+          <figure class="image">
+            <img src="../assets/images/sample.jpg">
+          </figure>
+        </b-carousel-item>
+        <b-carousel-item >
+          <figure class="image">
+            <img src="../assets/images/sample2.jpg">
+          </figure>
+        </b-carousel-item>
+      </b-carousel>
+    </div>
 
+  </div>
 </template>
 
 <script>

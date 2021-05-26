@@ -1,4 +1,6 @@
 module.exports = {
-    publicPath: 'https://alfaazfoundation.in/alfaazBlogginFrontend/',
+    publicPath: process.env.NODE_ENV === 'production'
+        ? 'https://alfaazfoundation.in/alfaazBlogginFrontend/'
+        : '',
     outputDir:'./docs'
 }
