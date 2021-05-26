@@ -1,15 +1,23 @@
 <template>
-  <div class="columns">
-    <div class="column">
+  <div class="columns mb0">
+    <div class="column mb0 pb0">
       <b-carousel
           indicator-style="is-lines"
-          pause-text=""
+          icon-prev="menu-left"
+          icon-next="menu-right"
+          icon-size="is-large"
+          :pause-info="false"
 
       >
         <b-carousel-item >
-          <figure class="image">
-            <img src="../assets/images/sample.jpg">
-          </figure>
+          <b-image
+              :src="require('../assets/images/sample.jpg')"
+              alt="The Buefy Logo"
+
+          ></b-image>
+<!--          <figure class="image is-fullwidth">
+            <img src="../assets/images/sample.jpg" >
+          </figure>-->
         </b-carousel-item>
         <b-carousel-item >
           <figure class="image">
