@@ -1,5 +1,5 @@
 <template>
-  <b-navbar :shadow="true">
+  <b-navbar :shadow="true" class="is-offset-1 is-10">
     <template slot="brand">
     <div class="navbar-brand">
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
@@ -11,26 +11,25 @@
       </b-navbar-item>
       </div>
 
-<div class="navbar-menu">
-    <div class="navbar-start">
-      <router-link to="/" class="navbar-item">Home</router-link>
-      <router-link to="/about" class="navbar-item">About</router-link>
-      <router-link to="/contact" class="navbar-item">Creators</router-link>
-    </div>
-    <div class="navbar-end">
-      <div class="navbar-item">
+
+    </template>
+    
+    <template  slot="end">
+
+      <b-navbar-item tag="div">
+        <router-link to="/" class="navbar-item">Home</router-link>
+        <router-link to="/about" class="navbar-item">About</router-link>
+        <router-link to="/contact" class="navbar-item">Creators</router-link>
+      </b-navbar-item>
+      <b-navbar-item tag="div">
         <div class="buttons">
           <a class="button is-primary">
             <strong>Sign In</strong>
           </a>
         </div>
-      </div>
-    </div>
-    </div>
-    </template>
-    
-    <template v-if="user.authenticated" slot="end">
-      <b-navbar-item tag="div">
+      </b-navbar-item>
+
+<!--      <b-navbar-item tag="div">
         <div class="buttons">
           <a
             class="button is-dark"
@@ -39,7 +38,7 @@
             Log out
           </a>
         </div>
-      </b-navbar-item>
+      </b-navbar-item>-->
     </template>
   </b-navbar>
 </template>
@@ -76,7 +75,7 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 nav {
     margin-top: 0px;

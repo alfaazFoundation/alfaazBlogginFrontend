@@ -1,5 +1,5 @@
 <template >
-  <footer class="footer has-text-white-ter">
+  <footer class="footer has-text-white-ter section">
     <div class="content ">
       <div class="columns has-background-black-ter pt2 pb2">
         <div class="column is-offset-3 is-3 ">
@@ -12,7 +12,7 @@
           <div class="columns">
             <div class="column">
 
-              <ul class="has-text-left ">
+              <ul class="has-text-left list-without-bullets">
                 <li >About Us</li>
                 <li class="mt1">Blogs</li>
                 <li class="mt1">Creators</li>
@@ -98,7 +98,7 @@ h3{
   color: #B6040C !important;
 }
 
-ul{
+list-without-bullets{
   list-style-type:none;
   margin-left: auto;
   margin-right: auto;
