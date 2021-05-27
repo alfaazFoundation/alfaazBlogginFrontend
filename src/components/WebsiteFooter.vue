@@ -1,8 +1,8 @@
 <template >
-  <footer class="footer has-text-white-ter">
-    <div class="content ">
+  <div class="columns has-text-white-ter">
+    <div class="column">
       <div class="columns has-background-black-ter pt2 pb2">
-        <div class="column is-offset-3 is-3 ">
+        <div class="column is-offset-3 is-3 is-12-mobile is-offset-0-mobile">
           <div class="columns ">
             <div class="column  has-text-centered-mobile">
               <h3>Quick Links</h3>
@@ -26,7 +26,7 @@
             </div>
           </div>
         </div>
-        <div class="column is-3">
+        <div class="column is-3 is-12-mobile">
           <div class="columns">
             <div class="column has-text-centered-touch">
               <h3>Write To Us</h3>
@@ -81,13 +81,13 @@
 
       <div class="columns has-background-black-bis" style="height: 3rem;">
         <div class="column is-offset-1 is-10 has-text-right has-text-centered-touch  has-text-right-widescreen">
-          <p class="mr2">
+          <p >
             © 2021 Alfaaz Foundation. All rights reserved.
           </p>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
 </template>
 
 <script>
@@ -103,8 +103,7 @@ h3{
 
 ul{
   list-style-type:none !important;
-  margin-left: auto;
-  margin-right: auto;
+
   margin-top: 0;
 }
 

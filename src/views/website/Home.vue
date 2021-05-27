@@ -1,10 +1,7 @@
 <template>
-  <div class="columns">
-    <div class="column">
-      <main-page-hero-carousel></main-page-hero-carousel>
-      <blog-list></blog-list>
-    </div>
-
+  <div>
+    <main-page-hero-carousel></main-page-hero-carousel>
+    <blog-list></blog-list>
   </div>
 </template>
 
