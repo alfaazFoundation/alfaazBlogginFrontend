@@ -13,9 +13,15 @@
             <div class="column">
 
               <ul class="has-text-left list-without-bullets">
-                <li >About Us</li>
-                <li class="mt1">Blogs</li>
-                <li class="mt1">Creators</li>
+                <li :to="{ path: '/about' }">
+                  <router-link to="/about">About Us</router-link>
+                </li>
+                <li class="mt1">
+                  <router-link to="/">Blogs</router-link>
+                </li>
+                <li class="mt1">
+                  <router-link to="/creators">Creators</router-link>
+                </li>
               </ul>
             </div>
           </div>
@@ -98,12 +104,15 @@ h3{
   color: #B6040C !important;
 }
 
-list-without-bullets{
-  list-style-type:none;
+ul{
+  list-style-type:none !important;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
+}
 
+a {
+  color: whitesmoke !important;
 }
 
 </style>
