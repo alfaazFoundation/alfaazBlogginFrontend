@@ -3,6 +3,7 @@
     <div id="nav">
       <nav-bar></nav-bar>
     </div>
+
     <div class="columns mb0">
       <div class="column">
         <router-view/>

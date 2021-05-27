@@ -1,10 +1,10 @@
 <template >
-  <footer class="footer has-text-white-ter section">
+  <footer class="footer has-text-white-ter">
     <div class="content ">
       <div class="columns has-background-black-ter pt2 pb2">
         <div class="column is-offset-3 is-3 ">
           <div class="columns ">
-            <div class="column has-text-centered-tablet has-text-centered-mobile">
+            <div class="column  has-text-centered-mobile">
               <h3>Quick Links</h3>
             </div>
           </div>
@@ -12,8 +12,8 @@
           <div class="columns">
             <div class="column">
 
-              <ul class="has-text-left list-without-bullets has-text-centered-tablet has-text-centered-mobile">
-                <li :to="{ path: '/about' }">
+              <ul class="has-text-left has-text-left-widescreen list-without-bullets  has-text-centered-mobile">
+                <li  :to="{ path: '/about' }">
                   <router-link to="/about">About Us</router-link>
                 </li>
                 <li class="mt1">
@@ -28,12 +28,12 @@
         </div>
         <div class="column is-3">
           <div class="columns">
-            <div class="column has-text-centered-mobile has-text-centered-tablet">
+            <div class="column has-text-centered-touch">
               <h3>Write To Us</h3>
             </div>
           </div>
           <div class="columns">
-            <div class="column is-offset-1-mobile is-10-mobile">
+            <div class="column is-offset-1-touch is-10-touch">
               <b-field >
                 <b-input
                     placeholder="E-mail"
@@ -44,7 +44,7 @@
             </div>
           </div>
           <div class="columns">
-            <div class="column is-offset-1-mobile is-10-mobile">
+            <div class="column is-offset-1-touch is-10-touch">
               <b-field >
                 <b-input
                     placeholder="Message"
@@ -56,7 +56,7 @@
           </div>
 
           <div class="columns">
-            <div class="column has-text-right-desktop-only has-text-centered-tablet has-text-centered-mobile">
+            <div class="column has-text-right-desktop has-text-centered-touch has-text-right-widescreen">
 
               <b-field >
                 <p class="control ">
@@ -80,7 +80,7 @@
       </div>
 
       <div class="columns has-background-black-bis" style="height: 3rem;">
-        <div class="column is-offset-1 is-10 has-text-right-desktop-only has-text-centered-mobile has-text-centered-tablet">
+        <div class="column is-offset-1 is-10 has-text-right has-text-centered-touch  has-text-right-widescreen">
           <p class="mr2">
             © 2021 Alfaaz Foundation. All rights reserved.
           </p>

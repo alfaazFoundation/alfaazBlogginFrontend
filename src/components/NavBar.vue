@@ -1,32 +1,33 @@
-<template>
-  <b-navbar :shadow="true" class="is-offset-1 is-10">
-    <template slot="brand">
-    <div class="navbar-brand">
+<template class="container">
+  <b-navbar :shadow="true" class="">
+    <template #brand class="columns is-offset-1 is-10 is-offset-0-mobile is-12-mobile">
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
         <img
-          src="../assets/images/alfaazLogoSquare.png"
-          width="50%"
-          alt="AlfaazLogo"
+            src="../assets/images/alfaazLogoSquare.png"
+            width="50%"
+            alt="AlfaazLogo"
+            class="is-hidden-touch "
+        >
+
+        <img
+            src="../assets/images/alfaazLogoSquare.png"
+            width="25%"
+            alt="AlfaazLogo"
+            class="is-hidden-desktop "
         >
       </b-navbar-item>
-      </div>
-
-
     </template>
-    
-    <template  slot="end">
+    <template  #end class="columns is-offset-1 is-10 is-offset-0-mobile is-12-mobile">
 
-      <b-navbar-item tag="div">
-        <router-link to="/" class="navbar-item">Home</router-link>
+      <b-navbar-item tag="div" class="has-text-centered-mobile">
+        <router-link to="/" class="navbar-item ">Home</router-link>
         <router-link to="/about" class="navbar-item">About</router-link>
         <router-link to="/contact" class="navbar-item">Creators</router-link>
       </b-navbar-item>
-      <b-navbar-item tag="div">
-        <div class="buttons">
-          <a class="button is-primary">
+      <b-navbar-item tag="div" class="has-text-centered-mobile">
+          <a class="button is-primary ">
             <strong>Sign In</strong>
           </a>
-        </div>
       </b-navbar-item>
 
 <!--      <b-navbar-item tag="div">
