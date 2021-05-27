@@ -4,7 +4,7 @@
       <div class="columns has-background-black-ter pt2 pb2">
         <div class="column is-offset-3 is-3 ">
           <div class="columns ">
-            <div class="column">
+            <div class="column has-text-centered-tablet has-text-centered-mobile">
               <h3>Quick Links</h3>
             </div>
           </div>
@@ -12,14 +12,14 @@
           <div class="columns">
             <div class="column">
 
-              <ul class="has-text-left list-without-bullets">
+              <ul class="has-text-left list-without-bullets has-text-centered-tablet has-text-centered-mobile">
                 <li :to="{ path: '/about' }">
                   <router-link to="/about">About Us</router-link>
                 </li>
                 <li class="mt1">
                   <router-link to="/">Blogs</router-link>
                 </li>
-                <li class="mt1">
+                <li class="mt1  ">
                   <router-link to="/creators">Creators</router-link>
                 </li>
               </ul>
@@ -28,12 +28,12 @@
         </div>
         <div class="column is-3">
           <div class="columns">
-            <div class="column">
+            <div class="column has-text-centered-mobile has-text-centered-tablet">
               <h3>Write To Us</h3>
             </div>
           </div>
           <div class="columns">
-            <div class="column">
+            <div class="column is-offset-1-mobile is-10-mobile">
               <b-field >
                 <b-input
                     placeholder="E-mail"
@@ -44,7 +44,7 @@
             </div>
           </div>
           <div class="columns">
-            <div class="column">
+            <div class="column is-offset-1-mobile is-10-mobile">
               <b-field >
                 <b-input
                     placeholder="Message"
@@ -56,15 +56,12 @@
           </div>
 
           <div class="columns">
-            <div class="column">
+            <div class="column has-text-right-desktop-only has-text-centered-tablet has-text-centered-mobile">
 
-              <div class="field is-grouped is-grouped-right">
+              <b-field >
+                <p class="control ">
 
-
-                <p class="control">
-
-                  <button class="button is-primary"
-                          >
+                  <button class="button is-primary">
                     <span>Contact Us</span>
                     &nbsp;&nbsp;
                     &nbsp;
@@ -72,18 +69,18 @@
                     <b-icon
                         icon="send"
                         size="is-small"
-                        class="is-primary"
+                        class="is-primary "
                     />
                   </button>
                 </p>
-              </div>
+              </b-field>
             </div>
           </div>
         </div>
       </div>
 
       <div class="columns has-background-black-bis" style="height: 3rem;">
-        <div class="column is-offset-1 is-10 has-text-right">
+        <div class="column is-offset-1 is-10 has-text-right-desktop-only has-text-centered-mobile has-text-centered-tablet">
           <p class="mr2">
             © 2021 Alfaaz Foundation. All rights reserved.
           </p>
