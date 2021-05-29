@@ -25,7 +25,7 @@
         <router-link to="/contact" class="navbar-item">Creators</router-link>
       </b-navbar-item>
       <b-navbar-item tag="div" class="has-text-centered-mobile" >
-          <a class="button is-primary ">
+          <a class="button is-primary " href="/login">
             <strong>
               <router-link to="/login" class="has-text-white">Sign In</router-link>
             </strong>

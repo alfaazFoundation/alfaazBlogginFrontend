@@ -1,8 +1,22 @@
 <template>
-    <section class="section">
-        <p>This is new blog</p>
-    </section>
-
+  <section class="section has-background-white-ter">
+    <div class="columns ">
+      <div class="column">
+        <h1 class="title has-text-primary">This is new blog</h1>
+      </div>
+    </div>
+    <div class="columns ">
+      <div class="column">
+        <b-field >
+          <b-input
+              placeholder="Message"
+              type="textarea"
+          >
+          </b-input>
+        </b-field>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>

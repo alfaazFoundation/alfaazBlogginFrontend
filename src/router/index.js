@@ -13,7 +13,6 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-
     component: WebsiteRouter,
     children:[
       {
@@ -42,11 +41,11 @@ const routes = [
     path:'/dashboard',
     component: Dashboard,
     children :[
-     {
-      path:'/new-blog',
+      {
+        path:'new-blog',
         name: 'Create New Blog',
         component:CreateNewBlog
-     }
+      }
     ]
   }
 ]
