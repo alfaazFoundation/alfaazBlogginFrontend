@@ -46,7 +46,30 @@
           </div>
         </div>
         <div class="columns">
-          <div class="column has-text-centered has-text-black ">
+         <div class="column has-text-centered has-text-weight-light">
+           <p class="has-text-weight-light">OR CONNECT USING</p>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="field is-grouped is-grouped-centered">
+              <p class="control">
+                <b-button rounded class="button is-light"
+                        @click="loginBiller">
+                  Sign In With Google
+                </b-button>
+              </p>
+              <p class="control">
+                <b-button rounded class="button is-light"
+                        @click="loginBiller">
+                  Sign In With Facebook
+                </b-button>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column has-text-centered has-text-black">
             <a href="/#/register">Don't have an account? </a>
           </div>
         </div>
