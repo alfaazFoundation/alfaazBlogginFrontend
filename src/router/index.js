@@ -7,6 +7,7 @@ import WebsiteRouter from "@/views/website/WebsiteRouter";
 import About from "@/views/website/About";
 import Dashboard from "@/views/dashboard/Dashboard"
 import CreateNewBlog from "@/views/dashboard/CreateNewBlog"
+import Stats from "@/views/dashboard/Stats";
 
 Vue.use(VueRouter)
 
@@ -41,6 +42,11 @@ const routes = [
     path:'/dashboard',
     component: Dashboard,
     children :[
+      {
+        path:'',
+        name: 'Statistics',
+        component:Stats
+      },
       {
         path:'new-blog',
         name: 'Create New Blog',

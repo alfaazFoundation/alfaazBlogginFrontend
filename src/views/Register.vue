@@ -175,7 +175,8 @@
 
   export default {
     name: "Register.vue"
-    , mounted() {
+    ,
+    mounted() {
       this.axiosInstance = axios.create({
         baseURL: baseUrl,
         headers: {

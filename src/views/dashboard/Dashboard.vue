@@ -4,10 +4,10 @@
       <nav-bar></nav-bar>
     </div>
     <div class="columns is-gapless">
-      <div class="column is-2">
-        <sidebar></sidebar>
+      <div class="column is-2 is-hidden-touch" >
+        <sidebar style="position: fixed;width: 100%"></sidebar>
       </div>
-      <div class="column is-10">
+      <div class="column is-10 is-12-touch" style="z-index: 10;">
         <router-view/>
       </div>
     </div>
@@ -30,3 +30,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+sidebar{
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+}
+</style>
