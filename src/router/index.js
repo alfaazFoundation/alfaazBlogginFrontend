@@ -5,6 +5,8 @@ import LoginBiller from "@/views/Login";
 import RegisterBiller from "@/views/Register";
 import WebsiteRouter from "@/views/website/WebsiteRouter";
 import About from "@/views/website/About";
+import Dashboard from "@/views/dashboard/Dashboard"
+import CreateNewBlog from "@/views/dashboard/CreateNewBlog"
 
 Vue.use(VueRouter)
 
@@ -35,6 +37,17 @@ const routes = [
     path: '/register',
     name: 'Sign Up',
     component: RegisterBiller
+  },
+  {
+    path:'/dashboard',
+    component: Dashboard,
+    children :[
+     {
+      path:'/new-blog',
+        name: 'Create New Blog',
+        component:CreateNewBlog
+     }
+    ]
   }
 ]
 
