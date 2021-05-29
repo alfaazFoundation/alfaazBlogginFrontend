@@ -20,18 +20,12 @@ document.title = title;
 export default {
   name: 'App',
   components: {
-    // NavBar
+
   },
 }
 
 
-Vue.use(
-    Buefy
-)
-
-
-
-
+Vue.use(Buefy)
 
 Vue.filter('formatDate', function(value) {
   if (value) {
