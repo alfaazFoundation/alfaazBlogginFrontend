@@ -132,6 +132,33 @@
           </div>
         </div>
 
+       <div class="columns">
+         <div class="column has-text-centered has-text-weight-light">
+           <p class="has-text-weight-light">OR</p>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="field is-grouped is-grouped-centered">
+              <p class="control">
+                <b-button rounded class="button is-light"
+                        @click="loginBiller">
+                        <b-icon icon="google" type="is-danger"/><span></span>
+                        <span></span>
+                  Sign Up With Google
+                </b-button>
+              </p>
+              <p class="control">
+                <b-button rounded class="button is-light"
+                        @click="loginBiller">
+                        <b-icon icon="facebook" type="is-info"/><span></span>
+                        <span></span>
+                  Sign Up With Facebook
+                </b-button>
+              </p>
+            </div>
+          </div>
+        </div>
         <div class="columns">
           <div class="column has-text-centered has-text-black ">
             <a href="/#/login">Already have an account? </a>
