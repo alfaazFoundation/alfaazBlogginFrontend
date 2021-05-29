@@ -24,9 +24,11 @@
         <router-link to="/about" class="navbar-item">About</router-link>
         <router-link to="/contact" class="navbar-item">Creators</router-link>
       </b-navbar-item>
-      <b-navbar-item tag="div" class="has-text-centered-mobile">
+      <b-navbar-item tag="div" class="has-text-centered-mobile" >
           <a class="button is-primary ">
-            <strong>Sign In</strong>
+            <strong>
+              <router-link to="/login" class="has-text-white">Sign In</router-link>
+            </strong>
           </a>
       </b-navbar-item>
 

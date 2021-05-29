@@ -47,7 +47,7 @@
         </div>
         <div class="columns">
          <div class="column has-text-centered has-text-weight-light">
-           <p class="has-text-weight-light">OR CONNECT USING</p>
+           <p class="has-text-weight-light" style="color: #807e7e;">Or connect using</p>
           </div>
         </div>
         <div class="columns">
