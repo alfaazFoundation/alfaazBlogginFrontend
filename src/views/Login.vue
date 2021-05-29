@@ -56,12 +56,16 @@
               <p class="control">
                 <b-button rounded class="button is-light"
                         @click="loginBiller">
+                        <b-icon icon="google" type="is-danger"/><span></span>
+                        <span></span>
                   Sign In With Google
                 </b-button>
               </p>
               <p class="control">
                 <b-button rounded class="button is-light"
                         @click="loginBiller">
+                        <b-icon icon="facebook" type="is-info"/><span></span>
+                        <span></span>
                   Sign In With Facebook
                 </b-button>
               </p>
