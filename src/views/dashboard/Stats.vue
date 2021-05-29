@@ -1,7 +1,7 @@
 <template>
   <section class="section has-background-white-ter same-page-height ">
     <div class="columns card section">
-      <dov class="column">
+      <div class="column">
         <h1 class="title has-text-primary">Statistics</h1>
         <div class="columns ">
           <div class="column">
@@ -13,7 +13,7 @@
             <p> Total number of roles made = {{totalRoles}} </p>
           </div>
         </div>
-      </dov>
+      </div>
     </div>
 
   </section>

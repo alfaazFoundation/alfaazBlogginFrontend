@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div id="nav">
-      <nav-bar></nav-bar>
+      <dashboard-nav-bar></dashboard-nav-bar>
     </div>
     <div class="columns is-gapless">
       <div class="column is-2 is-hidden-touch" >
@@ -17,14 +17,16 @@
 <script>
 // @ is an alias to /src
 
-import NavBar from "@/components/NavBar";
+// import NavBar from "@/components/NavBar";
 import Sidebar from "@/components/Sidebar";
+import DashboardNavBar from "@/components/DashboardNavBar";
 
 export default {
   name: 'Dashboard',
   components: {
+    DashboardNavBar,
 
-    NavBar,
+
     Sidebar
 
   }
