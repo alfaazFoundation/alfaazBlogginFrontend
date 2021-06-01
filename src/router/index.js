@@ -8,6 +8,7 @@ import About from "@/views/website/About";
 import Dashboard from "@/views/dashboard/Dashboard"
 import CreateNewBlog from "@/views/dashboard/CreateNewBlog"
 import Stats from "@/views/dashboard/Stats";
+import ListBlog from "@/views/dashboard/ListBlog"
 
 Vue.use(VueRouter)
 
@@ -51,6 +52,11 @@ const routes = [
         path:'new-blog',
         name: 'Create New Blog',
         component:CreateNewBlog
+      },
+      {
+        path : 'list-blog',
+        name : 'list blogs',
+        component : ListBlog
       }
     ]
   }
