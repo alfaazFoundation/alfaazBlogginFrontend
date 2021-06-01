@@ -55,10 +55,10 @@
             <div class="field is-grouped is-grouped-centered">
               <p class="control">
                 <b-button rounded class="button is-light"
-                        @click="loginBiller">
-                        <b-icon icon="google" type="is-danger"/><span></span>
+                        >
+                        <a href="http://localhost:8080/oauth2/authorization/google" > <b-icon icon="google" type="is-danger"/><span></span>
                         <span></span>
-                  Sign In With Google
+                          Sign In With Google</a>
                 </b-button>
               </p>
               <p class="control">
@@ -106,16 +106,41 @@
       }
     },
     methods:{
+      signInWithFB(){
+
+          window.fbAsyncInit = function() {
+            // eslint-disable-next-line no-undef
+          FB.init({
+            appId      : '{your-app-id}',
+            cookie     : true,
+            xfbml      : true,
+            version    : '{api-version}'
+          });
+
+            // eslint-disable-next-line no-undef
+          FB.AppEvents.logPageView();
+
+        };
+
+          (function(d, s, id){
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) {return;}
+          js = d.createElement(s); js.id = id;
+          js.src = "https://connect.facebook.net/en_US/sdk.js";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+      },
       loginBiller(){
-        this.axiosInstance.post('/api/biller/login',this.$data.loginRequest)
+        /*this.axiosInstance.post('/api/biller/login',this.$data.loginRequest)
           .then(response=>{
             console.log(response);
-            /* this.$buefy.toast.open({
+            /!* this.$buefy.toast.open({
                duration: 3000,
                message: `Login Successful`,
                position: 'is-bottom',
                type: 'is-success'
-             });*/
+             });*!/
             localStorage.setItem("token",response.data.token);
             this.$router.push('/dashboard/add-invoice');
           })
@@ -127,7 +152,7 @@
               position: 'is-bottom',
               type: 'is-danger'
             })
-          })
+          })*/
       }
     }
   }
