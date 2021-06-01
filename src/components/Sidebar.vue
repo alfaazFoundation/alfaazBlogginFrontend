@@ -7,7 +7,7 @@
       </b-menu-list>
       <b-menu-list label="BLOG">
         <b-menu-item icon="plus" label="Create new blog" to="/dashboard/new-blog" tag="router-link"></b-menu-item>
-        <b-menu-item icon="format-list-bulleted" label="List Blogs">
+        <b-menu-item icon="format-list-bulleted" label="List Blogs" to="/dashboard/list-blog" tag="router-link">
         </b-menu-item>
       </b-menu-list>
       <b-menu-list label="Actions">

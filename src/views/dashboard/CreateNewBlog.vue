@@ -18,7 +18,7 @@
         <div class="columns ">
           <div class="column">
             <b-field label ="This canvas is all yours!">
-              <Vueditor class="" style="min-height: 50rem; border: solid thin black"></Vueditor>
+              <Vueditor class="" style="min-height: 32rem; border: solid thin black"></Vueditor>
             </b-field>
           </div>
         </div>
