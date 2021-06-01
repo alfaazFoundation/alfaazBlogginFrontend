@@ -22,7 +22,8 @@
     "node-sass": "^6.0.0",
     "sass-loader": "^10.1.1",
     "vue": "^2.6.12",
-    "vue-router": "^3.2.0"
+    "vue-router": "^3.2.0",
+    "vueditor":"0.3.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
