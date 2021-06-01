@@ -132,12 +132,12 @@
           </div>
         </div>
 
-       <div class="columns">
+<!--       <div class="columns">
          <div class="column has-text-centered has-text-weight-light">
            <p class="has-text-weight-light " style="color: #807e7e;">Or</p>
           </div>
-        </div>
-        <div class="columns">
+        </div>-->
+<!--        <div class="columns">
           <div class="column">
             <div class="field is-grouped is-grouped-centered">
               <p class="control">
@@ -158,7 +158,7 @@
               </p>
             </div>
           </div>
-        </div>
+        </div>-->
         <div class="columns">
           <div class="column has-text-centered has-text-black ">
             <a href="/#/login">Already have an account? </a>
