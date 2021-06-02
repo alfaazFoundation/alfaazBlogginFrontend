@@ -30,6 +30,7 @@ export default {
       baseURL: baseUrl,
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
     });
 

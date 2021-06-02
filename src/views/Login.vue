@@ -45,33 +45,6 @@
             </div>
           </div>
         </div>
-<!--        <div class="columns">
-         <div class="column has-text-centered has-text-weight-light">
-           <p class="has-text-weight-light" style="color: #807e7e;">Or connect using</p>
-          </div>
-        </div>-->
-<!--        <div class="columns">
-          <div class="column">
-            <div class="field is-grouped is-grouped-centered">
-              <p class="control">
-                <b-button rounded class="button is-light"
-                        @click="loginBiller">
-                        <b-icon icon="google" type="is-danger"/><span></span>
-                        <span></span>
-                  Sign In With Google
-                </b-button>
-              </p>
-              <p class="control">
-                <b-button rounded class="button is-light"
-                        @click="loginBiller">
-                        <b-icon icon="facebook" type="is-info"/><span></span>
-                        <span></span>
-                  Sign In With Facebook
-                </b-button>
-              </p>
-            </div>
-          </div>
-        </div>-->
         <div class="columns">
           <div class="column has-text-centered has-text-black">
             <a href="/#/register">Don't have an account? </a>
@@ -107,7 +80,7 @@
     },
     methods:{
       loginBiller(){
-        this.axiosInstance.post('/api/biller/login',this.$data.loginRequest)
+        this.axiosInstance.post('/api/public/admins/login',this.$data.loginRequest)
           .then(response=>{
             console.log(response);
             /* this.$buefy.toast.open({
@@ -117,7 +90,7 @@
                type: 'is-success'
              });*/
             localStorage.setItem("token",response.data.token);
-            this.$router.push('/dashboard/add-invoice');
+            this.$router.push('/dashboard');
           })
           .catch(error=>{
             console.error(error);

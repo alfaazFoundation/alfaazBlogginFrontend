@@ -8,7 +8,7 @@
     "url": "https://github.com/shivendrasinghtanwar"
   },
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --port 8081",
     "build": "vue-cli-service build",
     "build-for-github": "cross-env NODE_ENV=dev webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "lint": "vue-cli-service lint"
