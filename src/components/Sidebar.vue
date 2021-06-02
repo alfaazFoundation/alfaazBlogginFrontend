@@ -12,7 +12,7 @@
       </b-menu-list>
       <b-menu-list label="Actions">
         <b-menu-item icon="cog" label="Settings"></b-menu-item>
-        <b-menu-item icon="logout" label="Logout"></b-menu-item>
+        <b-menu-item icon="logout" label="Logout"  @click="logout()"></b-menu-item>
       </b-menu-list>
     </b-menu>
   </div>
@@ -25,6 +25,12 @@ export default {
   name: 'Sidebar',
   components: {
 
+  },
+  methods:{
+    logout(){
+      localStorage.removeItem('token');
+      this.$router.push("/");
+    }
   }
 }
 </script>
