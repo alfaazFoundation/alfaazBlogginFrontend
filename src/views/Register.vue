@@ -74,7 +74,7 @@
 
         <div class="columns">
           <div class="column has-text-centered has-text-black ">
-            <a href="/#/login">Already have an account? </a>
+            <router-link to="/login">Already have an account? </router-link>
           </div>
         </div>
       </div>
