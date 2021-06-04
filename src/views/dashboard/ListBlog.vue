@@ -78,8 +78,8 @@ export default {
   data() {
     return {
         blogs :[],
-        defaultOpenedDetails: [0],
-        selected: (this.blogs)[1]
+        defaultOpenedDetails: [0]
+       // selected: (this.blogs)[1]
     }
   },
   methods:{
