@@ -9,6 +9,7 @@ import Dashboard from "@/views/dashboard/Dashboard"
 import CreateNewBlog from "@/views/dashboard/CreateNewBlog"
 import Stats from "@/views/dashboard/Stats";
 import ListBlog from "@/views/dashboard/ListBlog"
+import AccountSettings from "@/views/dashboard/AccountSettings";
 
 Vue.use(VueRouter)
 
@@ -57,6 +58,11 @@ const routes = [
         path : 'list-blog',
         name : 'list blogs',
         component : ListBlog
+      },
+      {
+        path : 'settings',
+        name : 'Settings',
+        component : AccountSettings
       }
     ]
   }

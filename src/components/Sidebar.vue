@@ -11,7 +11,7 @@
         </b-menu-item>
       </b-menu-list>
       <b-menu-list label="Actions">
-        <b-menu-item icon="cog" label="Settings"></b-menu-item>
+        <b-menu-item icon="cog" label="Settings" to="/dashboard/settings" tag="router-link"></b-menu-item>
         <b-menu-item icon="logout" label="Logout"  @click="logout()"></b-menu-item>
       </b-menu-list>
     </b-menu>
