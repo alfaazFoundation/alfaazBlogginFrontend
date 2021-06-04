@@ -6,28 +6,28 @@
       </div>
     </div>
     <b-table
-        :data="data"
+        :data="blogs"
         ref="table"
         paginated
         per-page="5"
         :opened-detailed="defaultOpenedDetails"
         detailed
-        detail-key="first_name"
-        @details-open="(row) => $buefy.toast.open(`Expanded ${row.first_name}`)"
+        detail-key="title"
+        @details-open="(row) => $buefy.toast.open(`Expanded ${row.title}`)"
         aria-next-label="Next page"
         aria-previous-label="Previous page"
         aria-page-label="Page"
         aria-current-label="Current page">
 
-      <b-table-column field="first_name" label="Title" sortable v-slot="props">
+      <b-table-column field="title" label="Title" sortable v-slot="props">
         <div class="title is-5">
-            {{ props.row.first_name }}
+            {{ props.row.title }}
         </div>
       </b-table-column>
 
-      <b-table-column field="date" label="Date" sortable centered v-slot="props">
+      <b-table-column field="publishedOn" label="Date" sortable centered v-slot="props">
                 <span class="tag is-success">
-                    {{ new Date(props.row.date).toLocaleDateString() }}
+                    {{ new Date(props.row.publishedOn).toLocaleDateString() }}
                 </span>
       </b-table-column>
       <template #detail="props">
@@ -40,13 +40,11 @@
           <div class="media-content">
             <div class="content">
               <p>
-                <strong>{{ props.row.first_name }} {{ props.row.last_name }}</strong>
-                <small>@{{ props.row.first_name }}</small>
+                <strong>{{ props.row.title }}</strong>
+                <small>@{{ props.row.title }}</small>
                 <small>31m</small>
                 <br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Proin ornare magna eros, eu pellentesque tortor vestibulum ut.
-                Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                {{ props.row.content}}
               </p>
             </div>
           </div>
@@ -63,25 +61,44 @@
 
 <script>
 
+const baseUrl = process.env.VUE_APP_API_SERVER;
+import axios from "axios";
+
 export default {
   name: 'ListBlog',
-  components: {
-
+  mounted() {
+    this.axiosInstance = axios.create({
+      baseURL: baseUrl,
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization' : `Bearer ${localStorage.getItem('token')}`
+      }
+    });
   },
   data() {
-    const data = [
-      { 'first_name': 'Just Somethings!', 'date': '2016-10-15 13:43:27'},
-      { 'first_name': 'Go Wild', 'date': '2016-12-15 06:00:53' },
-      { 'first_name': 'Desire', 'date': '2016-04-26 06:26:28' },
-      {  'first_name': 'Imperfect Living', 'date': '2016-04-10 10:28:46' },
-      {  'first_name': 'Priceless Gifts', 'date': '2016-12-06 14:38:38' }
-    ]
-
     return {
-      data,
+        blogs :[],
         defaultOpenedDetails: [0],
-      selected: data[1]
+        selected: (this.blogs)[1]
     }
+  },
+  methods:{
+   getBlogs(){
+     this.axiosInstance.get('/api/blog/user')
+         .then(response=>{
+           console.log(response);
+           this.blogs = response.data;
+         })
+         .catch(error=>{
+           console.error(error);
+           this.$buefy.toast.open({
+             duration: 3000,
+             message: `Something went wrong`,
+             position: 'is-bottom',
+             type: 'is-danger'
+           })
+         })
+   }
   }
 }
 </script>
