@@ -64,7 +64,7 @@
           <div class="column">
             <div class="field is-grouped is-grouped-centered">
               <p class="control">
-                <button class="button is-primary" @click="registerBiller">
+                <button class="button is-primary" @click="registerAdmin">
                   Register
                 </button>
               </p>
@@ -108,23 +108,23 @@ export default {
     }
   },
   methods:{
-    registerBiller(){
+    registerAdmin(){
       this.axiosInstance.post('/api/public/admins',this.$data.admin)
           .then(response=>{
             console.log(response);
             this.$buefy.toast.open({
               duration: 3000,
-              message: `Biller Registered`,
+              message: `Admin Registered`,
               position: 'is-bottom',
               type: 'is-success'
             })
             this.$router.push('/login');
           })
           .catch(error=>{
-            console.error(error);
+            console.error('error',error.response);
             this.$buefy.toast.open({
               duration: 3000,
-              message: `Something went wrong`,
+              message: error.response.data.message,
               position: 'is-bottom',
               type: 'is-danger'
             })
