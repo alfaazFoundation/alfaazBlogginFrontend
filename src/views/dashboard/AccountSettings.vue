@@ -88,7 +88,7 @@
           <div class="column ">
             <div class="field is-grouped is-grouped-centered">
               <p class="control">
-                <button class="button is-primary" >
+                <button class="button is-primary" @click="updateAdminSettings">
                   Update
                 </button>
               </p>
@@ -145,7 +145,27 @@ export default {
       });
     },
     updateAdminSettings(){
+      this.axiosInstance.post('/api/admins/settings',this.$data.admin)
+          .then(res=>{
+            console.log('Update settings Response',res);
 
+            this.$buefy.toast.open({
+              duration: 3000,
+              message: `Settings Updated`,
+              position: 'is-bottom',
+              type: 'is-success'
+            });
+            this.getAdmin()
+          })
+          .catch(error=>{
+            console.log('Error',error);
+            this.$buefy.toast.open({
+              duration: 3000,
+              message: error.response.data.message,
+              position: 'is-bottom',
+              type: 'is-danger'
+            })
+          });
     }
   }
 }
