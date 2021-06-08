@@ -121,10 +121,10 @@ export default {
             this.$router.push('/login');
           })
           .catch(error=>{
-            console.error(error);
+            console.error('error',error.response);
             this.$buefy.toast.open({
               duration: 3000,
-              message: `Something went wrong`,
+              message: error.response.data.message,
               position: 'is-bottom',
               type: 'is-danger'
             })
