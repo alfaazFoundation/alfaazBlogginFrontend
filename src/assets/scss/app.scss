@@ -1,9 +1,12 @@
 @charset "utf-8";
 
 // Import a Google Font
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
-
-
+//@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+//@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;600;700;800&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+//body {
+//  font-family: 'Mate SC', serif !important;
+//}
 $text:#000000;
 
 // Set your brand colors
@@ -13,7 +16,7 @@ $brown: #757763;
 $beige-light: #D0D1CD;
 $beige-lighter: #EFF0EB;
 
-  // Update Bulma's global variables
+// Update Bulma's global variables
 $family-sans-serif: "Nunito", sans-serif;
 $grey-dark: $brown;
 $grey-light: $beige-light;

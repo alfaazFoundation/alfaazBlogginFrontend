@@ -23,9 +23,18 @@
           <hr class="is-primary mt-1">
           <div class="blog-card-content">
             {{content}}
+
           </div>
+
           <div class="has-text-right mt2-5">
-            {{ getHumanDateFromUnixTime(publishedOn) }}
+
+            {{ getHumanDateFromUnixTime(publishedOn) }} |
+            <router-link to="/blog">Read
+              <b-icon
+                icon="arrow-top-right-thick"
+                size="is-small">
+            </b-icon>
+            </router-link>
           </div>
         </div>
         <nav class="level is-mobile">

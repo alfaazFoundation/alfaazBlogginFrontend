@@ -2,7 +2,7 @@
   <div class="columns has-text-white-ter">
     <div class="column">
       <div class="columns has-background-black-ter pt2 pb2">
-        <div class="column is-offset-3 is-3 is-12-mobile is-offset-0-mobile">
+        <div class="column is-offset-3 is-3 is-12-mobile ">
           <div class="columns ">
             <div class="column  has-text-centered-mobile">
               <h3>Quick Links</h3>

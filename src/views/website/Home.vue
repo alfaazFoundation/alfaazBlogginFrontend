@@ -1,4 +1,4 @@
-<template class="container">
+<template >
   <div class="columns has-background-white-bis">
     <div class="column ">
       <main-page-hero-carousel></main-page-hero-carousel>

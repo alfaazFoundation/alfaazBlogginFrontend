@@ -1,6 +1,6 @@
-<template class="container">
+<template >
   <div class="columns has-background-white-ter">
-    <div class="column is-offset-1 is-10 has-background-white is-12-mobile is-offset-0-mobile">
+    <div class="column is-offset-1 is-10 has-background-white is-12-mobile ">
       <section class="section">
         <h1 class="has-text-primary title">About Us</h1>
       </section>
@@ -25,11 +25,6 @@
       <p class="section">
         Please write us back with your feedback and doubts. We would be glad to respond to all of them.
       </p>
-      <section class="section">
-
-
-
-      </section>
 
       <section class="section">
         <h3 class="has-text-primary">Contact us</h3>

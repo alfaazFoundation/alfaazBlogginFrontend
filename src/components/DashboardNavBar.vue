@@ -1,6 +1,6 @@
 <template>
   <b-navbar :shadow="true" >
-    <template #brand class="columns is-offset-1 is-10 is-offset-0-mobile is-12-mobile">
+    <template #brand class="columns is-offset-1 is-10  is-12-mobile">
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
         <img
             src="../assets/images/alfaazLogoSquare.png"

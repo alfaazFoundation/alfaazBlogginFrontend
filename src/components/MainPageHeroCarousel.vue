@@ -1,4 +1,4 @@
-<template class="container">
+<template >
   <div class="columns ">
     <div class="column ">
       <b-carousel

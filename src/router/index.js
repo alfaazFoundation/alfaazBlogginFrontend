@@ -11,6 +11,7 @@ import Stats from "@/views/dashboard/Stats";
 import ListBlog from "@/views/dashboard/ListBlog"
 import AccountSettings from "@/views/dashboard/AccountSettings";
 import WebsiteBlogView from "@/views/website/WebsiteBlogView";
+import WebsiteCreators from "@/views/website/WebsiteCreators";
 
 Vue.use(VueRouter)
 
@@ -31,7 +32,8 @@ const routes = [
       },
       {
         path: 'creators',
-        name: 'Creators'
+        name: 'Creators',
+        component: WebsiteCreators
       },
       {
         path: 'blog',

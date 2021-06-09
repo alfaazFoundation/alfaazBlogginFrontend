@@ -1,4 +1,4 @@
-<template class="container">
+<template >
   <b-navbar :shadow="true" :fixed-top="true" >
     <template #brand>
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
@@ -22,7 +22,7 @@
       <b-navbar-item tag="div" class="has-text-centered-mobile">
         <router-link to="/" class="navbar-item ">Home</router-link>
         <router-link to="/about" class="navbar-item">About</router-link>
-        <router-link to="/contact" class="navbar-item">Creators</router-link>
+        <router-link to="/creators" class="navbar-item">Creators</router-link>
       </b-navbar-item>
       <b-navbar-item tag="router-link" class="has-text-centered-mobile" :to="{path:'/login'}" >
           <a class="button is-primary " >
