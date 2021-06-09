@@ -1,21 +1,24 @@
-<template>
-  <div class="home">
-    <div id="nav">
-      <nav-bar></nav-bar>
-    </div>
+<template class="container">
+  <div class="columns">
+    <div class="column">
+      <div class="columns mb0">
+        <div class="column">
+          <nav-bar></nav-bar>
+        </div>
+      </div>
 
-    <div class="columns mb0">
-      <div class="column">
-        <router-view/>
+      <div class="columns mb0">
+        <div class="column">
+          <router-view/>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <WebsiteFooter></WebsiteFooter>
+        </div>
       </div>
     </div>
-
-    <div class="columns">
-      <div class="column">
-        <WebsiteFooter></WebsiteFooter>
-      </div>
-    </div>
-
   </div>
 </template>
 

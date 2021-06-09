@@ -1,6 +1,6 @@
-<template>
-  <div class="columns mb0">
-    <div class="column mb0 pb0">
+<template class="container">
+  <div class="columns ">
+    <div class="column ">
       <b-carousel
           indicator-style="is-lines"
           icon-prev="menu-left"
@@ -13,11 +13,7 @@
           <b-image
               :src="require('../assets/images/sample.jpg')"
               alt="The Buefy Logo"
-
           ></b-image>
-<!--          <figure class="image is-fullwidth">
-            <img src="../assets/images/sample.jpg" >
-          </figure>-->
         </b-carousel-item>
         <b-carousel-item >
           <figure class="image">

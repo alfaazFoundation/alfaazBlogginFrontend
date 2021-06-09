@@ -10,6 +10,7 @@ import CreateNewBlog from "@/views/dashboard/CreateNewBlog"
 import Stats from "@/views/dashboard/Stats";
 import ListBlog from "@/views/dashboard/ListBlog"
 import AccountSettings from "@/views/dashboard/AccountSettings";
+import WebsiteBlogView from "@/views/website/WebsiteBlogView";
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,15 @@ const routes = [
         path:'/about',
         name: 'About Page',
         component:About
+      },
+      {
+        path: 'creators',
+        name: 'Creators'
+      },
+      {
+        path: 'blog',
+        name: 'Blog',
+        component: WebsiteBlogView
       }
     ]
   },

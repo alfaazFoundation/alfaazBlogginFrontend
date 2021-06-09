@@ -74,6 +74,7 @@ export default {
         'Authorization' : `Bearer ${localStorage.getItem('token')}`
       }
     });
+    this.getBlogs();
   },
   data() {
     return {

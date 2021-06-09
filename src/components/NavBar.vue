@@ -1,6 +1,6 @@
 <template class="container">
-  <b-navbar :shadow="true" class="">
-    <template #brand class="columns is-offset-1 is-10 is-offset-0-mobile is-12-mobile">
+  <b-navbar :shadow="true" :fixed-top="true" >
+    <template #brand>
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
         <img
             src="../assets/images/alfaazLogoSquare.png"
@@ -17,7 +17,7 @@
         >
       </b-navbar-item>
     </template>
-    <template  #end class="columns is-offset-1 is-10 is-offset-0-mobile is-12-mobile">
+    <template  #end >
 
       <b-navbar-item tag="div" class="has-text-centered-mobile">
         <router-link to="/" class="navbar-item ">Home</router-link>
@@ -31,17 +31,6 @@
             </strong>
           </a>
       </b-navbar-item>
-
-<!--      <b-navbar-item tag="div">
-        <div class="buttons">
-          <a
-            class="button is-dark"
-            @click="logout()"
-          >
-            Log out
-          </a>
-        </div>
-      </b-navbar-item>-->
     </template>
   </b-navbar>
 </template>

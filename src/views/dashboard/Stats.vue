@@ -44,7 +44,7 @@ export default {
   },
   methods:{
     getTotalAdmins(){
-      this.axiosInstance.get('/api/admins')
+      this.axiosInstance.get('/api/public/admins')
           .then(response=>{
             console.log('Admins Api call response ',response);
             this.totalAdmins = response.data.length

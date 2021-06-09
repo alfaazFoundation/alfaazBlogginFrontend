@@ -1,4 +1,4 @@
-<template>
+<template class="container">
   <div class="columns has-background-white-ter">
     <div class="column is-offset-1 is-10 has-background-white is-12-mobile is-offset-0-mobile">
       <section class="section">

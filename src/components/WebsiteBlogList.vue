@@ -61,7 +61,7 @@
 <script>
 import BlogCard from "@/components/BlogCard";
 export default {
-  name: "BlogList",
+  name: "WebsiteBlogList",
   components: {BlogCard},
   data() {
     return {
