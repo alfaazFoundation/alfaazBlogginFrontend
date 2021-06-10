@@ -89,6 +89,7 @@ export default {
   data() {
     return {
       blogData: {
+        id:"",
         title: "",
         content: "",
         blogStatus: ""
@@ -98,9 +99,11 @@ export default {
   methods:{
     saveDraft(){
       this.$data.blogData.blogStatus="DRAFT"
-      this.axiosInstance.post('/api/blog',this.$data.blogData)
+      console.log(this.$data.blogData)
+          this.axiosInstance.post('/api/blog',this.$data.blogData)
           .then(response=>{
             console.log(response);
+            this.$data.blogData.id = response.data
                this.$buefy.toast.open({
                duration: 3000,
                message: `Draft Saved`,
