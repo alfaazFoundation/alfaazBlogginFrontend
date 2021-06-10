@@ -26,8 +26,8 @@
       </b-table-column>
 
       <b-table-column field="publishedOn" label="Date" sortable centered v-slot="props">
-                <span class="tag is-success">
-                    {{ new Date(props.row.publishedOn).toLocaleDateString() }}
+                <span>
+                    {{ getHumanDateFromUnixTime(props.row.publishedOn) }}
                 </span>
       </b-table-column>
       <template #detail="props">
@@ -99,7 +99,15 @@ export default {
              type: 'is-danger'
            })
          })
-   }
+   },
+    getHumanDateFromUnixTime(unixTimestamp){
+      let dateObject = new Date(unixTimestamp); // The 0 there is the key, which sets the date to the epoch
+      let localeDateString = dateObject.toLocaleString("en-US", {month: "long",day: "numeric",year:'numeric'}) // 15
+
+      console.log('Converted local date string - ',localeDateString);
+
+      return localeDateString;
+    }
   }
 }
 </script>
