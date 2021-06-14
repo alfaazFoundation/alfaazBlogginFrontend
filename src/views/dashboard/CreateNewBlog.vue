@@ -24,6 +24,11 @@
         </div>
         <div class="columns ">
           <div class="column">
+              <ckeditor :editor="editor" ... ></ckeditor>
+          </div>
+        </div>
+        <div class="columns ">
+          <div class="column">
             <div class="field is-grouped is-grouped-centered">
               <p class="control">
                 <button class="button is-primary" @click="saveDraft">
@@ -45,37 +50,15 @@
 
 <script>
 // @ is an alias to /src
-//import MediumEditor from 'vuejs-medium-editor';
-//import Vuex from 'vuex'
 const baseUrl = process.env.VUE_APP_API_SERVER;
 import axios from 'axios';
-
-/*import Vueditor from 'vueditor'
-import 'vueditor/dist/style/vueditor.min.css' */
-
-/*let config = {
-  toolbar: [
-    'removeFormat', 'undo', '|', 'elements', 'fontName', 'fontSize', 'foreColor', 'backColor', 'divider',
-    'bold', 'italic', 'underline', 'strikeThrough', 'links', 'divider', 'subscript', 'superscript',
-    'divider', 'justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull', '|', 'indent', 'outdent',
-    'insertOrderedList', 'insertUnorderedList', '|', 'picture', 'tables', '|', 'switchView' 
-  ],
-  fontName: [
-    {val: 'arial black'}, 
-    {val: 'times new roman'}, 
-    {val: 'Courier New'}
-  ],
-  fontSize: ['12px', '14px', '16px', '18px', '0.8rem', '1.0rem', '1.2rem', '1.5rem', '2.0rem'],
-  uploadUrl: ''
-};*/
-
-//Vue.use(Vuex);
-//Vue.use(Vueditor, config);
+import CKEditor from '@ckeditor/ckeditor5-vue2';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 export default {
   name: 'CreateNewBlog',
   components: {
-
+    ckeditor: CKEditor.component
   },
   mounted() {
     this.axiosInstance = axios.create({
@@ -88,6 +71,7 @@ export default {
   },
   data() {
     return {
+      editor: ClassicEditor,
       blogData: {
         id:"",
         title: "",
