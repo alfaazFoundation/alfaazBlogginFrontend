@@ -15,16 +15,16 @@
             </b-field>
           </div>
         </div>
-        <div class="columns ">
+<!--        <div class="columns ">
           <div class="column">
             <b-field label ="This canvas is all yours!">
                 <b-input type="textarea" v-model="blogData.content"></b-input>
             </b-field>
           </div>
-        </div>
+        </div>-->
         <div class="columns ">
           <div class="column">
-              <ckeditor :editor="editor" ></ckeditor>
+              <ckeditor :editor="editor" v-model="blogData.content"></ckeditor>
           </div>
         </div>
         <div class="columns ">

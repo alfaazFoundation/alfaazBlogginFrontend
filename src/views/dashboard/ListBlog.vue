@@ -44,7 +44,7 @@
                 <small>@{{ props.row.title }}</small>
                 <small>31m</small>
                 <br>
-                {{ props.row.content}}
+                <span v-html="props.row.content"></span>
               </p>
             </div>
           </div>
