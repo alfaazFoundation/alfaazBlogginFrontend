@@ -24,7 +24,7 @@
         </div>
         <div class="columns ">
           <div class="column">
-              <ckeditor :editor="editor" ... ></ckeditor>
+              <ckeditor :editor="editor" ></ckeditor>
           </div>
         </div>
         <div class="columns ">
