@@ -8,16 +8,30 @@
 
         <div class="columns">
           <div class="column is-12-mobile ">
-            <blog-card
-              :title="blog.title"
-              :content="blog.content"
-              :author-name="blog.authorName"
-              :published-on="blog.publishedOn"
+            <blog-card v-for="blog in blogs"
+              v-bind:title="blog.title"
+              v-bind:content="blog.content"
+              v-bind:author-name="blog.publishedBy"
+              v-bind:published-on="blog.publishedOn"
+              :key="blog.id"
             >
             </blog-card>
           </div>
         </div>
 
+<!--        <div class="columns">
+          <div class="column is-12-mobile ">
+            <blog-card
+                :title="blog.title"
+                :content="blog.content"
+                :author-name="blog.authorName"
+                :published-on="blog.publishedOn"
+            >
+            </blog-card>
+          </div>
+        </div>-->
+
+<!--
         <div class="columns">
           <div class="column is-12-mobile ">
             <blog-card
@@ -29,8 +43,9 @@
             </blog-card>
           </div>
         </div>
+-->
 
-        <div class="columns">
+<!--        <div class="columns">
           <div class="column is-12-mobile ">
             <blog-card
                 :title="blog.title"
@@ -40,19 +55,7 @@
             >
             </blog-card>
           </div>
-        </div>
-
-        <div class="columns">
-          <div class="column is-12-mobile ">
-            <blog-card
-                :title="blog.title"
-                :content="blog.content"
-                :author-name="blog.authorName"
-                :published-on="blog.publishedOn"
-            >
-            </blog-card>
-          </div>
-        </div>
+        </div>-->
       </div>
     </div>
   </section>
@@ -60,17 +63,40 @@
 
 <script>
 import BlogCard from "@/components/BlogCard";
+
+const baseUrl = process.env.VUE_APP_API_SERVER;
+import axios from "axios";
+
 export default {
   name: "WebsiteBlogList",
   components: {BlogCard},
+  mounted() {
+    this.axiosInstance = axios.create({
+      baseURL: baseUrl
+    });
+    this.getBlogs();
+  },
   data() {
     return {
-      blog:{
-        title:"First Title that can be long you kn be long you kn be long you kn be long you kn be long you knowcan be long you knowcan be long you know ",
-        content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis., consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis., con",
-        authorName:"Shivendra Singh Tanwar",
-        publishedOn:1623175822307
-      }
+      blogs:[]
+    }
+  },
+  methods:{
+    getBlogs(){
+      this.axiosInstance.get('/api/publishedBlogs')
+          .then(response=>{
+            console.log(response);
+            this.blogs = response.data;
+          })
+          .catch(error=>{
+            console.error(error);
+            this.$buefy.toast.open({
+              duration: 3000,
+              message: `Something went wrong`,
+              position: 'is-bottom',
+              type: 'is-danger'
+            })
+          })
     }
   }
 }
